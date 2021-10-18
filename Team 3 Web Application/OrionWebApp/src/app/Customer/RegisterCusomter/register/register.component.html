@@ -1,77 +1,115 @@
-
 <div class="container">
+  <form [formGroup]="form" (ngSubmit)="Register()">
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>Register Customer</h2>
 
-<form  [formGroup] = "form" (ngSubmit) = "Register()">
-  <mat-dialog-content class="mat-typography">
-    <div class="controls">
-<br>
-    <h2 mat-dialog-title>Register Customer</h2>
-
-    <br>
-         <mat-form-field appearance="outline">
+        <br />
+        <mat-form-field appearance="outline">
           <mat-label>Select Customer Type</mat-label>
           <mat-select
             [(value)]="parameter.CustomerTypeID"
             formControlName="CustomerTypeID"
           >
-            <mat-option *ngFor="let item of CustomerTypeData" [value]="item.CustomerTypeID">
+            <mat-option
+              *ngFor="let item of CustomerTypeData"
+              [value]="item.CustomerTypeID"
+            >
               {{ item.CustomerTypeDescription }}
             </mat-option>
           </mat-select>
         </mat-form-field>
 
-
         <button mat-raised-button color="primary" (click)="AddCustomerType()">
-  Add Customer Type
-</button>
+          Add Customer Type
+        </button>
 
-<br />
-      <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input type="text" matInput placeholder="Joe" formControlName = "CustomerName"
-        pattern = "[a-zA-Z][a-zA-Z\s]*"/>
-        <mat-hint>Your name</mat-hint>
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Surname</mat-label>
-        <input type="text" matInput placeholder="Smith" formControlName = "CustomerSurname"
-        pattern = "[a-zA-Z][a-zA-Z\s]*"/>
-        <mat-hint>Your Surname</mat-hint>
-      </mat-form-field>
-            <mat-form-field appearance="outline">
-        <mat-label>Cellphone Number</mat-label>
-        <input type="number" matInput placeholder="01234567" formControlName = "CustomerCellphoneNumber"
-        pattern = "[0-9]"/>
-        <mat-hint>Your number</mat-hint>
-      </mat-form-field>
+        <br />
         <mat-form-field appearance="outline">
-        <mat-label>Date of Birth</mat-label>
-        <input type="date" matInput placeholder="1998/06/15" formControlName = "CustomerDateOfBirth"/>
-        <mat-hint>Your Date of Birth</mat-hint>
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Email Address</mat-label>
-        <input type="email" matInput placeholder="example@gmail.com" formControlName = "CustomerEmailAddress"/>
-        <mat-hint>Your email address</mat-hint>
-      </mat-form-field>
+          <mat-label>Name</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Joe"
+            formControlName="CustomerName"
+            pattern="[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Your name</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Surname</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Smith"
+            formControlName="CustomerSurname"
+            pattern="[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Your Surname</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cellphone Number</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="01234567"
+            formControlName="CustomerCellphoneNumber"
+           
+          />
+          <mat-hint>Your number</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Date of Birth</mat-label>
+          <input
+            type="date"
+            matInput
+            placeholder="1998/06/15"
+            formControlName="CustomerDateOfBirth"
+          />
+          <mat-hint>Your Date of Birth</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email Address</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="example@gmail.com"
+            formControlName="CustomerEmailAddress"
+          />
+          <mat-hint>Your email address</mat-hint>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Physical address</mat-label>
-        <input type="text" matInput placeholder="1126 Park St, Hatfield, Pretoria, 0028" formControlName = "CustomerPhysicalAddress"/>
-        <mat-hint>Your Physical address</mat-hint>
-      </mat-form-field>
-<br>
-<br>
+        <mat-form-field appearance="outline">
+          <mat-label>Physical address</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="1126 Park St, Hatfield, Pretoria, 0028"
+            formControlName="CustomerPhysicalAddress"
+          />
+          <mat-hint>Your Physical address</mat-hint>
+        </mat-form-field>
+        <br />
+        <br />
         <mat-dialog-actions align="end">
-    <button mat-raised-button color="primary" type="submit" (click)="addUser()" cdkFocusInitial
-    [disabled] = "!form.valid"
-    >Register</button>
-    &nbsp;&nbsp; &nbsp;
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            (click)="addUser()"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Register
+          </button>
+          &nbsp;&nbsp; &nbsp;
 
-    <button mat-raised-button color="primary" (click)="back()">Cancel</button>
-  </mat-dialog-actions>
-    </div>
-  </mat-dialog-content>
-
-</form>
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
 </div>

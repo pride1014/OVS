@@ -1,3 +1,4 @@
+import { BookShiftComponent } from './Employee/book-shift/book-shift.component';
 import { ManageCustomersComponent } from './Manager/manager/manage-customers/manage-customers.component';
 import { ProductQuoteComponent } from './Product/product-quote/product-quote.component';
 import { SaleComponent } from './Product/sale/sale.component';
@@ -79,6 +80,10 @@ const routes: Routes = [
   {
     path: 'Register',
     component: RegisterComponent
+  },
+  {
+    path: 'BookShift',
+    component: BookShiftComponent
   },
   {
     path: 'Employee',

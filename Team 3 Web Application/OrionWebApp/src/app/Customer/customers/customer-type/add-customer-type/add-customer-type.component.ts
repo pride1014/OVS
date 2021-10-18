@@ -66,6 +66,9 @@ export class AddCustomerTypeComponent implements OnInit {
     }
   }
 
+  AddDiscount(){
+    this.router.navigateByUrl("AddEditDiscount")
+  }
 
   RegisterCustomerType()
   {

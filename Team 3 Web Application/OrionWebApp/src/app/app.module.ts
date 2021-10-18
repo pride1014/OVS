@@ -82,9 +82,10 @@ import { ProductQuoteComponent } from './Product/product-quote/product-quote.com
 import { AddQuoteComponent } from './Product/product-quote/add-quote/add-quote.component';
 import { ViewQoutesComponent } from './Product/product-quote/view-qoutes/view-qoutes.component';
 import { ManageCustomersComponent } from './Manager/manager/manage-customers/manage-customers.component';
+import { BookShiftComponent } from './Employee/book-shift/book-shift.component';
 
 
-//import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService, WorkWeekService, MonthService, MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
+import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService, WorkWeekService, MonthService, MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
 @NgModule({
   declarations: [
     AppComponent,
@@ -149,7 +150,8 @@ import { ManageCustomersComponent } from './Manager/manager/manage-customers/man
     ProductQuoteComponent,
     AddQuoteComponent,
     ViewQoutesComponent,
-    ManageCustomersComponent
+    ManageCustomersComponent,
+    BookShiftComponent
   ],
   imports: [
     BrowserModule,
@@ -171,13 +173,13 @@ import { ManageCustomersComponent } from './Manager/manager/manage-customers/man
     MatDialogModule,
     MatCardModule,
     MatButtonModule, 
-    HttpClientModule
-  //  ScheduleModule,
-   // RecurrenceEditorModule
+    HttpClientModule,
+    ScheduleModule,
+   RecurrenceEditorModule
   ],
   providers: [{provide: MatDialogRef,
     useValue: {}}, 
-   // DayService, WeekService, WorkWeekService, MonthService, MonthAgendaService
+   DayService, WeekService, WorkWeekService, MonthService, MonthAgendaService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

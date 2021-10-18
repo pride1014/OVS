@@ -35,7 +35,7 @@ export class ProductCategoryComponent implements OnInit {
     this.service.DeleteCategory(CatagoryID).subscribe((res: any) => {
       console.log(res);
       if (res.Success === false) {
-        this.snack.open('Catagory not deleted.', 'OK', {
+        this.snack.open('Category cannnot be deleted since its linked to Product type/s.', 'OK', {
           verticalPosition: 'bottom',
           horizontalPosition: 'center',
           duration: 3000

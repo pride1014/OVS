@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
     CustomerEmailAddress: ['', Validators.compose([Validators.required, Validators.email])],
     CustomerPhysicalAddress: ['', Validators.compose([Validators.required, Validators.maxLength(20), Validators.minLength(2)])],
     CustomerDateOfBirth: ['', Validators.compose([Validators.required, Validators.maxLength(20), Validators.minLength(2)])],
- 
+    CustomerTypeID : ['', Validators.compose([Validators.required])]
   });
 
   observeCustomerType: Observable<CustomerType[]> = this.service.getCustomerType();
@@ -42,6 +42,9 @@ export class RegisterComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    this.observeCustomerType.subscribe(res => {
+      this.CustomerTypeData = res;
+    })
   }
 
   AddCustomerType() {

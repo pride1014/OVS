@@ -18,4 +18,9 @@ export class EmployeeDutiesComponent implements OnInit {
     this.router.navigateByUrl("Quote")
   }
 
+  shift()
+  {
+    this.router.navigateByUrl("BookShift")
+  }
+
 }
