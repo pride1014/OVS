@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OVSModelStoreContainer" CdmEntityContainer="OVSEntities5">
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="OVSModel.Branch">
+        <MappingFragment StoreEntitySet="Branch">
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+          <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+          <ScalarProperty Name="Branch_Location_Storage_Capacity" ColumnName="Branch_Location_Storage_Capacity" />
+          <ScalarProperty Name="Branch_Address" ColumnName="Branch_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="OVSModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="Cart_ID" ColumnName="Cart_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cart_Line">
+      <EntityTypeMapping TypeName="OVSModel.Cart_Line">
+        <MappingFragment StoreEntitySet="Cart_Line">
+          <ScalarProperty Name="Cart_Line_ID" ColumnName="Cart_Line_ID" />
+          <ScalarProperty Name="Cart_ID" ColumnName="Cart_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cash_Register">
+      <EntityTypeMapping TypeName="OVSModel.Cash_Register">
+        <MappingFragment StoreEntitySet="Cash_Register">
+          <ScalarProperty Name="Register_ID" ColumnName="Register_ID" />
+          <ScalarProperty Name="Cash_Register_Name" ColumnName="Cash_Register_Name" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colours">
+      <EntityTypeMapping TypeName="OVSModel.Colour">
+        <MappingFragment StoreEntitySet="Colour">
+          <ScalarProperty Name="Colour_ID" ColumnName="Colour_ID" />
+          <ScalarProperty Name="Colour_Description" ColumnName="Colour_Description" />
+          <ScalarProperty Name="Product_Size_ID" ColumnName="Product_Size_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Credit_Note">
+      <EntityTypeMapping TypeName="OVSModel.Credit_Note">
+        <MappingFragment StoreEntitySet="Credit_Note">
+          <ScalarProperty Name="Credit_Note_ID" ColumnName="Credit_Note_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Return_Order_Request_ID" ColumnName="Return_Order_Request_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="OVSModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Customer_Surname" ColumnName="Customer_Surname" />
+          <ScalarProperty Name="Customer_Cellphone_Number" ColumnName="Customer_Cellphone_Number" />
+          <ScalarProperty Name="Customer_Date_Of_Birth" ColumnName="Customer_Date_Of_Birth" />
+          <ScalarProperty Name="Customer_Email_Address" ColumnName="Customer_Email_Address" />
+          <ScalarProperty Name="Customer_Physical_Address" ColumnName="Customer_Physical_Address" />
+          <ScalarProperty Name="Customer_Type_ID" ColumnName="Customer_Type_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Type">
+      <EntityTypeMapping TypeName="OVSModel.Customer_Type">
+        <MappingFragment StoreEntitySet="Customer_Type">
+          <ScalarProperty Name="Customer_Type_ID" ColumnName="Customer_Type_ID" />
+          <ScalarProperty Name="Customer_Type_Description" ColumnName="Customer_Type_Description" />
+          <ScalarProperty Name="Discount_ID" ColumnName="Discount_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dates">
+      <EntityTypeMapping TypeName="OVSModel.Date">
+        <MappingFragment StoreEntitySet="Date">
+          <ScalarProperty Name="Date_ID" ColumnName="Date_ID" />
+          <ScalarProperty Name="Date_Description" ColumnName="Date_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Date_Time_Slot">
+      <EntityTypeMapping TypeName="OVSModel.Date_Time_Slot">
+        <MappingFragment StoreEntitySet="Date_Time_Slot">
+          <ScalarProperty Name="Date_Time_Slot_ID" ColumnName="Date_Time_Slot_ID" />
+          <ScalarProperty Name="Shift_ID" ColumnName="Shift_ID" />
+          <ScalarProperty Name="Time_Slot_ID" ColumnName="Time_Slot_ID" />
+          <ScalarProperty Name="Date_ID" ColumnName="Date_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discounts">
+      <EntityTypeMapping TypeName="OVSModel.Discount">
+        <MappingFragment StoreEntitySet="Discount">
+          <ScalarProperty Name="Discount_ID" ColumnName="Discount_ID" />
+          <ScalarProperty Name="Discount_Description" ColumnName="Discount_Description" />
+          <ScalarProperty Name="Discount_Name" ColumnName="Discount_Name" />
+          <ScalarProperty Name="Discount_Percentage" ColumnName="Discount_Percentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="OVSModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_Surname" ColumnName="Employee_Surname" />
+          <ScalarProperty Name="Employee_Phone_Number" ColumnName="Employee_Phone_Number" />
+          <ScalarProperty Name="Employee_Email_Address" ColumnName="Employee_Email_Address" />
+          <ScalarProperty Name="Employee_Type_ID" ColumnName="Employee_Type_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Type">
+      <EntityTypeMapping TypeName="OVSModel.Employee_Type">
+        <MappingFragment StoreEntitySet="Employee_Type">
+          <ScalarProperty Name="Employee_Type_ID" ColumnName="Employee_Type_ID" />
+          <ScalarProperty Name="Employee_Type_Description" ColumnName="Employee_Type_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="OVSModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Job_Description" ColumnName="Job_Description" />
+          <ScalarProperty Name="Job_Status_ID" ColumnName="Job_Status_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Instance">
+      <EntityTypeMapping TypeName="OVSModel.Job_Instance">
+        <MappingFragment StoreEntitySet="Job_Instance">
+          <ScalarProperty Name="Job_Instance_ID" ColumnName="Job_Instance_ID" />
+          <ScalarProperty Name="Job_task_ID" ColumnName="Job_task_ID" />
+          <ScalarProperty Name="Shift_Branch_Employee_ID" ColumnName="Shift_Branch_Employee_ID" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Instance_Task">
+      <EntityTypeMapping TypeName="OVSModel.Job_Instance_Task">
+        <MappingFragment StoreEntitySet="Job_Instance_Task">
+          <ScalarProperty Name="Job_Instance_Task_ID" ColumnName="Job_Instance_Task_ID" />
+          <ScalarProperty Name="Job_task_ID" ColumnName="Job_task_ID" />
+          <ScalarProperty Name="Job_Instance_ID" ColumnName="Job_Instance_ID" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Status">
+      <EntityTypeMapping TypeName="OVSModel.Job_Status">
+        <MappingFragment StoreEntitySet="Job_Status">
+          <ScalarProperty Name="Job_Status_ID" ColumnName="Job_Status_ID" />
+          <ScalarProperty Name="Job_Status_Description" ColumnName="Job_Status_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_task">
+      <EntityTypeMapping TypeName="OVSModel.Job_task">
+        <MappingFragment StoreEntitySet="Job_task">
+          <ScalarProperty Name="Job_task_ID" ColumnName="Job_task_ID" />
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+          <ScalarProperty Name="Job_Task_Status_ID" ColumnName="Job_Task_Status_ID" />
+          <ScalarProperty Name="Job_Task_Type_ID" ColumnName="Job_Task_Type_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Task_Status">
+      <EntityTypeMapping TypeName="OVSModel.Job_Task_Status">
+        <MappingFragment StoreEntitySet="Job_Task_Status">
+          <ScalarProperty Name="Job_Task_Status_ID" ColumnName="Job_Task_Status_ID" />
+          <ScalarProperty Name="Job_Task_Description_Status" ColumnName="Job_Task_Description_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job_Task_Type">
+      <EntityTypeMapping TypeName="OVSModel.Job_Task_Type">
+        <MappingFragment StoreEntitySet="Job_Task_Type">
+          <ScalarProperty Name="Job_Task_Type_ID" ColumnName="Job_Task_Type_ID" />
+          <ScalarProperty Name="Job_Task_Type_Description" ColumnName="Job_Task_Type_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="OVSModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Order_Date" ColumnName="Order_Date" />
+          <ScalarProperty Name="Order_Finalizastion_Date" ColumnName="Order_Finalizastion_Date" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Order_Status_ID" ColumnName="Order_Status_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Line">
+      <EntityTypeMapping TypeName="OVSModel.Order_Line">
+        <MappingFragment StoreEntitySet="Order_Line">
+          <ScalarProperty Name="Order_Line_ID" ColumnName="Order_Line_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Payment">
+      <EntityTypeMapping TypeName="OVSModel.Order_Payment">
+        <MappingFragment StoreEntitySet="Order_Payment">
+          <ScalarProperty Name="Order_Payment_ID" ColumnName="Order_Payment_ID" />
+          <ScalarProperty Name="Order_Payment_Amount" ColumnName="Order_Payment_Amount" />
+          <ScalarProperty Name="Order_Payment_Date" ColumnName="Order_Payment_Date" />
+          <ScalarProperty Name="Payment_Type_ID" ColumnName="Payment_Type_ID" />
+          <ScalarProperty Name="Order_Payment_Status_ID" ColumnName="Order_Payment_Status_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Payment_Status">
+      <EntityTypeMapping TypeName="OVSModel.Order_Payment_Status">
+        <MappingFragment StoreEntitySet="Order_Payment_Status">
+          <ScalarProperty Name="Order_Payment_Status_ID" ColumnName="Order_Payment_Status_ID" />
+          <ScalarProperty Name="Order_Payment_Status_Description" ColumnName="Order_Payment_Status_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Status">
+      <EntityTypeMapping TypeName="OVSModel.Order_Status">
+        <MappingFragment StoreEntitySet="Order_Status">
+          <ScalarProperty Name="Order_Status_ID" ColumnName="Order_Status_ID" />
+          <ScalarProperty Name="Order_Status_Description" ColumnName="Order_Status_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment_Type">
+      <EntityTypeMapping TypeName="OVSModel.Payment_Type">
+        <MappingFragment StoreEntitySet="Payment_Type">
+          <ScalarProperty Name="Payment_Type_ID" ColumnName="Payment_Type_ID" />
+          <ScalarProperty Name="Payment_Type_Description" ColumnName="Payment_Type_Description" />
+          <ScalarProperty Name="Payment_Type_Name" ColumnName="Payment_Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prices">
+      <EntityTypeMapping TypeName="OVSModel.Price">
+        <MappingFragment StoreEntitySet="Price">
+          <ScalarProperty Name="Price_ID" ColumnName="Price_ID" />
+          <ScalarProperty Name="Price_Amount" ColumnName="Price_Amount" />
+          <ScalarProperty Name="Price_Date" ColumnName="Price_Date" />
+          <ScalarProperty Name="Product_Size_ID" ColumnName="Product_Size_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="OVSModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+          <ScalarProperty Name="Product_Image" ColumnName="Product_Image" />
+          <ScalarProperty Name="Quantity_on_hand" ColumnName="Quantity_on_hand" />
+          <ScalarProperty Name="Product_Type_ID" ColumnName="Product_Type_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Category">
+      <EntityTypeMapping TypeName="OVSModel.Product_Category">
+        <MappingFragment StoreEntitySet="Product_Category">
+          <ScalarProperty Name="Product_Category_ID" ColumnName="Product_Category_ID" />
+          <ScalarProperty Name="Product_Category_Name" ColumnName="Product_Category_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Size">
+      <EntityTypeMapping TypeName="OVSModel.Product_Size">
+        <MappingFragment StoreEntitySet="Product_Size">
+          <ScalarProperty Name="Product_Size_ID" ColumnName="Product_Size_ID" />
+          <ScalarProperty Name="Size_ID" ColumnName="Size_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Special">
+      <EntityTypeMapping TypeName="OVSModel.Product_Special">
+        <MappingFragment StoreEntitySet="Product_Special">
+          <ScalarProperty Name="Product_Special_ID" ColumnName="Product_Special_ID" />
+          <ScalarProperty Name="Product_Size_ID" ColumnName="Product_Size_ID" />
+          <ScalarProperty Name="Special_ID" ColumnName="Special_ID" />
+          <ScalarProperty Name="Price_Amount" ColumnName="Price_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Type">
+      <EntityTypeMapping TypeName="OVSModel.Product_Type">
+        <MappingFragment StoreEntitySet="Product_Type">
+          <ScalarProperty Name="Product_Type_ID" ColumnName="Product_Type_ID" />
+          <ScalarProperty Name="Product_Type_Name" ColumnName="Product_Type_Name" />
+          <ScalarProperty Name="Product_Category_ID" ColumnName="Product_Category_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quote_Line">
+      <EntityTypeMapping TypeName="OVSModel.Quote_Line">
+        <MappingFragment StoreEntitySet="Quote_Line">
+          <ScalarProperty Name="Quote_Line_ID" ColumnName="Quote_Line_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Size_ID" ColumnName="Product_Size_ID" />
+          <ScalarProperty Name="Request_Quote_ID" ColumnName="Request_Quote_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quote_Status">
+      <EntityTypeMapping TypeName="OVSModel.Quote_Status">
+        <MappingFragment StoreEntitySet="Quote_Status">
+          <ScalarProperty Name="Quote_Status_ID" ColumnName="Quote_Status_ID" />
+          <ScalarProperty Name="Quote_Status_Description" ColumnName="Quote_Status_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Raw_Material">
+      <EntityTypeMapping TypeName="OVSModel.Raw_Material">
+        <MappingFragment StoreEntitySet="Raw_Material">
+          <ScalarProperty Name="Raw_Material_ID" ColumnName="Raw_Material_ID" />
+          <ScalarProperty Name="Raw_Material_Name" ColumnName="Raw_Material_Name" />
+          <ScalarProperty Name="Quantity_on_hand" ColumnName="Quantity_on_hand" />
+          <ScalarProperty Name="Raw_material_description" ColumnName="Raw_material_description" />
+          <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recipes">
+      <EntityTypeMapping TypeName="OVSModel.Recipe">
+        <MappingFragment StoreEntitySet="Recipe">
+          <ScalarProperty Name="Recipe_ID" ColumnName="Recipe_ID" />
+          <ScalarProperty Name="Recipe_Description" ColumnName="Recipe_Description" />
+          <ScalarProperty Name="Quantity_produced" ColumnName="Quantity_produced" />
+          <ScalarProperty Name="Recipe_Name" ColumnName="Recipe_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recipe_Line_Unit">
+      <EntityTypeMapping TypeName="OVSModel.Recipe_Line_Unit">
+        <MappingFragment StoreEntitySet="Recipe_Line_Unit">
+          <ScalarProperty Name="Recipe_Line_unit_ID" ColumnName="Recipe_Line_unit_ID" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reciple_Line">
+      <EntityTypeMapping TypeName="OVSModel.Reciple_Line">
+        <MappingFragment StoreEntitySet="Reciple_Line">
+          <ScalarProperty Name="Reciple_Line_ID" ColumnName="Reciple_Line_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Recipe_ID" ColumnName="Recipe_ID" />
+          <ScalarProperty Name="Raw_Material_ID" ColumnName="Raw_Material_ID" />
+          <ScalarProperty Name="Recipe_Line_unit_ID" ColumnName="Recipe_Line_unit_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request_Quote">
+      <EntityTypeMapping TypeName="OVSModel.Request_Quote">
+        <MappingFragment StoreEntitySet="Request_Quote">
+          <ScalarProperty Name="Request_Quote_ID" ColumnName="Request_Quote_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Quote_Status_ID" ColumnName="Quote_Status_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Return_Order_Request">
+      <EntityTypeMapping TypeName="OVSModel.Return_Order_Request">
+        <MappingFragment StoreEntitySet="Return_Order_Request">
+          <ScalarProperty Name="Return_Order_Request_ID" ColumnName="Return_Order_Request_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Request_Order_Date" ColumnName="Request_Order_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Return_Order_Request_Order_Line">
+      <EntityTypeMapping TypeName="OVSModel.Return_Order_Request_Order_Line">
+        <MappingFragment StoreEntitySet="Return_Order_Request_Order_Line">
+          <ScalarProperty Name="Return_Order_Request_Order_Line_ID" ColumnName="Return_Order_Request_Order_Line_ID" />
+          <ScalarProperty Name="Return_Order_Request_ID" ColumnName="Return_Order_Request_ID" />
+          <ScalarProperty Name="Order_Line_ID" ColumnName="Order_Line_ID" />
+          <ScalarProperty Name="Return_Reason" ColumnName="Return_Reason" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Return_Sale_Request">
+      <EntityTypeMapping TypeName="OVSModel.Return_Sale_Request">
+        <MappingFragment StoreEntitySet="Return_Sale_Request">
+          <ScalarProperty Name="Return_Sale_Request_ID" ColumnName="Return_Sale_Request_ID" />
+          <ScalarProperty Name="Return_Request_Date" ColumnName="Return_Request_Date" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Return_Sale_Request_Sale_Line">
+      <EntityTypeMapping TypeName="OVSModel.Return_Sale_Request_Sale_Line">
+        <MappingFragment StoreEntitySet="Return_Sale_Request_Sale_Line">
+          <ScalarProperty Name="Return_Sale_Request_Sale_Line_ID" ColumnName="Return_Sale_Request_Sale_Line_ID" />
+          <ScalarProperty Name="Return_Sale_Reason" ColumnName="Return_Sale_Reason" />
+          <ScalarProperty Name="Return_Sale_Request_ID" ColumnName="Return_Sale_Request_ID" />
+          <ScalarProperty Name="Sale_Line_ID" ColumnName="Sale_Line_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="OVSModel.Sale">
+        <MappingFragment StoreEntitySet="Sale">
+          <ScalarProperty Name="Sale_ID" ColumnName="Sale_ID" />
+          <ScalarProperty Name="Sale_Date" ColumnName="Sale_Date" />
+          <ScalarProperty Name="Request_Quote_ID" ColumnName="Request_Quote_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale_Line">
+      <EntityTypeMapping TypeName="OVSModel.Sale_Line">
+        <MappingFragment StoreEntitySet="Sale_Line">
+          <ScalarProperty Name="Sale_Line_ID" ColumnName="Sale_Line_ID" />
+          <ScalarProperty Name="Sale_ID" ColumnName="Sale_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale_Payment">
+      <EntityTypeMapping TypeName="OVSModel.Sale_Payment">
+        <MappingFragment StoreEntitySet="Sale_Payment">
+          <ScalarProperty Name="Sale_Payment_ID" ColumnName="Sale_Payment_ID" />
+          <ScalarProperty Name="Sale_Payment_Amount" ColumnName="Sale_Payment_Amount" />
+          <ScalarProperty Name="Sale_Payment_Date" ColumnName="Sale_Payment_Date" />
+          <ScalarProperty Name="Sale_Payment_Status_ID" ColumnName="Sale_Payment_Status_ID" />
+          <ScalarProperty Name="Sale_ID" ColumnName="Sale_ID" />
+          <ScalarProperty Name="Payment_Type_ID" ColumnName="Payment_Type_ID" />
+          <ScalarProperty Name="Register_ID" ColumnName="Register_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale_Payment_Status">
+      <EntityTypeMapping TypeName="OVSModel.Sale_Payment_Status">
+        <MappingFragment StoreEntitySet="Sale_Payment_Status">
+          <ScalarProperty Name="Sale_Payment_Status_ID" ColumnName="Sale_Payment_Status_ID" />
+          <ScalarProperty Name="Sale_Payment_Status_Desc" ColumnName="Sale_Payment_Status_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shifts">
+      <EntityTypeMapping TypeName="OVSModel.Shift">
+        <MappingFragment StoreEntitySet="Shift">
+          <ScalarProperty Name="Shift_ID" ColumnName="Shift_ID" />
+          <ScalarProperty Name="Shift_Type_ID" ColumnName="Shift_Type_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shift_Branch">
+      <EntityTypeMapping TypeName="OVSModel.Shift_Branch">
+        <MappingFragment StoreEntitySet="Shift_Branch">
+          <ScalarProperty Name="Shift_Branch_ID" ColumnName="Shift_Branch_ID" />
+          <ScalarProperty Name="Shift_ID" ColumnName="Shift_ID" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shift_Branch_Employee">
+      <EntityTypeMapping TypeName="OVSModel.Shift_Branch_Employee">
+        <MappingFragment StoreEntitySet="Shift_Branch_Employee">
+          <ScalarProperty Name="Shift_Branch_Employee_ID" ColumnName="Shift_Branch_Employee_ID" />
+          <ScalarProperty Name="Shift_Branch_ID" ColumnName="Shift_Branch_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shift_Type">
+      <EntityTypeMapping TypeName="OVSModel.Shift_Type">
+        <MappingFragment StoreEntitySet="Shift_Type">
+          <ScalarProperty Name="Shift_Type_ID" ColumnName="Shift_Type_ID" />
+          <ScalarProperty Name="Shift_Type_Description" ColumnName="Shift_Type_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sizes">
+      <EntityTypeMapping TypeName="OVSModel.Size">
+        <MappingFragment StoreEntitySet="Size">
+          <ScalarProperty Name="Size_ID" ColumnName="Size_ID" />
+          <ScalarProperty Name="Size_Description" ColumnName="Size_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specials">
+      <EntityTypeMapping TypeName="OVSModel.Special">
+        <MappingFragment StoreEntitySet="Special">
+          <ScalarProperty Name="Special_ID" ColumnName="Special_ID" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="OVSModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Supplier_Phone_Number" ColumnName="Supplier_Phone_Number" />
+          <ScalarProperty Name="Supplier_Address" ColumnName="Supplier_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier_Order">
+      <EntityTypeMapping TypeName="OVSModel.Supplier_Order">
+        <MappingFragment StoreEntitySet="Supplier_Order">
+          <ScalarProperty Name="Supplier_Order_ID" ColumnName="Supplier_Order_ID" />
+          <ScalarProperty Name="Supplier_Order_Description" ColumnName="Supplier_Order_Description" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier_Order_Line">
+      <EntityTypeMapping TypeName="OVSModel.Supplier_Order_Line">
+        <MappingFragment StoreEntitySet="Supplier_Order_Line">
+          <ScalarProperty Name="Supplier_Order_Line_ID" ColumnName="Supplier_Order_Line_ID" />
+          <ScalarProperty Name="Supplier_Order_ID" ColumnName="Supplier_Order_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Raw_Material_ID" ColumnName="Raw_Material_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="OVSModel.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+          <ScalarProperty Name="Task_Description" ColumnName="Task_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Time_Slot">
+      <EntityTypeMapping TypeName="OVSModel.Time_Slot">
+        <MappingFragment StoreEntitySet="Time_Slot">
+          <ScalarProperty Name="Time_Slot_ID" ColumnName="Time_Slot_ID" />
+          <ScalarProperty Name="Starting_time" ColumnName="Starting_time" />
+          <ScalarProperty Name="Ending_time" ColumnName="Ending_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="OVSModel.Unit">
+        <MappingFragment StoreEntitySet="Unit">
+          <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+          <ScalarProperty Name="Unit_Measurement" ColumnName="Unit_Measurement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="OVSModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="User_Access_Permission_ID" ColumnName="User_Access_Permission_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Access_Permission">
+      <EntityTypeMapping TypeName="OVSModel.User_Access_Permission">
+        <MappingFragment StoreEntitySet="User_Access_Permission">
+          <ScalarProperty Name="User_Access_Permission_ID" ColumnName="User_Access_Permission_ID" />
+          <ScalarProperty Name="User_Role_Name" ColumnName="User_Role_Name" />
+          <ScalarProperty Name="User_Role_Description" ColumnName="User_Role_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VATs">
+      <EntityTypeMapping TypeName="OVSModel.VAT">
+        <MappingFragment StoreEntitySet="VAT">
+          <ScalarProperty Name="VAT_ID" ColumnName="VAT_ID" />
+          <ScalarProperty Name="VAT_Percentage" ColumnName="VAT_Percentage" />
+          <ScalarProperty Name="VAT_Date" ColumnName="VAT_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wishlists">
+      <EntityTypeMapping TypeName="OVSModel.Wishlist">
+        <MappingFragment StoreEntitySet="Wishlist">
+          <ScalarProperty Name="Wishlist_ID" ColumnName="Wishlist_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wishlist_Product">
+      <EntityTypeMapping TypeName="OVSModel.Wishlist_Product">
+        <MappingFragment StoreEntitySet="Wishlist_Product">
+          <ScalarProperty Name="Wishlist_Product_ID" ColumnName="Wishlist_Product_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Wishlist_ID" ColumnName="Wishlist_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

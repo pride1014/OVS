@@ -1,0 +1,63 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreateSupplier()"  #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{title}}</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Supplier Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Pretoria Branch"
+            formControlName="SupplierName"
+            pattern = "[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Supplier Name</mat-hint>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="outline">
+          <mat-label>Supplier Cellphone Number</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="08123456"
+            formControlName="SupplierPhoneNumber"
+          />
+          <mat-hint>The Suppliers Cellphone Number</mat-hint>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="outline">
+          <mat-label>Supplier Address</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="562 Harrop Allin Road"
+            formControlName="SupplierAddress"
+          />
+          <mat-hint>Enter the Suppliers Address</mat-hint>
+        </mat-form-field>
+        <br />
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+           Save Supplier
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

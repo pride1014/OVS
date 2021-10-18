@@ -1,0 +1,113 @@
+<p>
+  <mat-toolbar class="flex">
+    <button
+      mat-icon-button
+      class="example-icon"
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Products</span>
+    <span class="example-spacer"></span>
+    <button
+      (click)="openLogin()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon> person_pin</mat-icon>
+    <span>Personal details</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
+  </button>
+  <button routerLink="/" mat-menu-item>
+    <mat-icon>lock</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>
+
+<div class="heading">
+  <section>
+    <div class="example-button-row">
+      <button
+        mat-button
+        [matMenuTriggerFor]="menuu"
+        #menuTrigger="matMenuTrigger"
+       
+        *ngFor="let item of CategoryData"
+        [value]="item.ProductCategoryID"
+
+        (click)="DisplayProductCat(item.ProductCategoryID)"
+      >
+        {{ item.ProductCategoryName }}
+      </button>
+      <mat-menu #menuu="matMenu" [overlapTrigger]="false">
+        <button
+          mat-menu-item
+       *ngFor="let type of TypeData"
+          [value]="type.ProductTypeID " 
+           (click)="DisplayProducts(type.ProductTypeID)"
+        >
+        <span>{{ type.ProductTypeName }}</span>
+        </button>
+      </mat-menu>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </section>
+</div>
+
+
+<div class="container">
+  <div class="col" *ngFor="let item of ProductData">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{ item.ProductName }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div>
+        <img
+          class="image"
+          src="data:image/jpg;base64,{{ item.ProductImage }}"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button" >
+          <button
+            mat-raised-button
+            class="buttons"
+            [routerLink]="['/Product-Details/', item.ProductID]"
+            (click)="DisplayProductDetails(item.ProductID)"
+            color="primary"
+          >
+            View {{ item.ProductName }} Details
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="container">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="CreateProduct()"
+    #formDir="ngForm"
+    novalidate
+  >
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>
+          <h1>{{ title }}</h1>
+        </h2>
+
+        <br />
+                <mat-form-field appearance="outline">
+          <mat-label>Select Product Type </mat-label>
+          <mat-select
+            [(value)]="typeparams.ProductTypeID"
+            formControlName="ProductTypeID"
+          >
+            <mat-option
+              *ngFor="let item of ProductTypeData"
+              [value]="item.ProductTypeID"
+            >
+              {{ item.ProductTypeName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="AddProductType()">
+  Add Product Type
+</button>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Product Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Floor Cleaner"
+            formControlName="ProductName"
+            pattern="[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Product Name</mat-hint>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Product Description</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="for cleaning"
+            formControlName="ProductDescription"
+          />
+          <mat-hint>Product Description</mat-hint>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Quantity On Hand</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="20"
+            formControlName="Quantityonhand"
+          />
+          <mat-hint>Quantity On Hand</mat-hint>
+        </mat-form-field>
+        <br />
+     
+        <!-- <mat-form-field appearance="outline">
+          <ngx-mat-file-input formControlName="ProductImage" placeholder="Select image"   (change)="SelectFile($event)" ></ngx-mat-file-input>
+          <mat-icon matSuffix>folder</mat-icon>
+        </mat-form-field> -->
+
+
+        <input
+          type="file"
+          (change)="SelectFile($event)"
+          placeholder="Images"
+          formControlName="ProductImage"
+        />
+   
+        <br />
+
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Product
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

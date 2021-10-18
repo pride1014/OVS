@@ -1,0 +1,71 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="Save()" >
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{ title }}</h2>
+
+        <br />
+
+                <mat-form-field>
+          <mat-label>Select Size</mat-label>
+          <mat-select
+            [(value)]="sizesParams.SizeID"
+            formControlName="SizeID"
+          >
+            <mat-option *ngFor="let item of SizesData" [value]="item.SizeID">
+              {{ item.SizeDescription }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+<button mat-raised-button color="primary" (click)="AddSize()">
+  Add Size
+</button>
+
+        <mat-form-field>
+          <mat-label>Select Product</mat-label>
+          <mat-select
+            [(value)]="productParams.ProductID"
+            formControlName="ProductID"
+          >
+            <mat-option *ngFor="let item of ProductData" [value]="item.ProductID">
+              {{ item.ProductName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Price Amount</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="500"
+            formControlName="PriceAmount"
+         
+          />
+          <mat-hint>Price Amount</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Product Size
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" >
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

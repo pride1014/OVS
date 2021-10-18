@@ -1,0 +1,90 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreateRawMaterial()" #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{title}}</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Raw Material Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder=" Water"
+            formControlName="RawMaterialName"
+            pattern = "[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Raw Material Name</mat-hint>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field appearance="outline">
+          <mat-label>Raw Material Description</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder=" For mixing"
+            formControlName="Rawmaterialdescription"
+          />
+          <mat-hint>Raw Material Description</mat-hint>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field appearance="outline">
+          <mat-label>Raw Material Quantity</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="100"
+            formControlName="QuantityOnhand"
+          />
+          <mat-hint>Raw Material Quantity</mat-hint>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field appearance="outline">
+          <mat-label>Raw Material Unit</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="750"
+            formControlName="UnitMeasurement"
+          />
+          <mat-hint>Raw Material Unit Measurement</mat-hint>
+        </mat-form-field>
+        <br />
+
+        <!-- <mat-form-field>
+          <mat-label>Select Unit</mat-label>
+          <mat-select
+            [(value)]="Unitparams.UnitID"
+            formControlName="UnitID"
+          >
+            <mat-option *ngFor="let item of UnitData" [value]="item.UnitID">
+              {{ item.UnitMeasurement }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Raw Material
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

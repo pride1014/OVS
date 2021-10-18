@@ -1,0 +1,61 @@
+<div class="container">
+  <mat-card class="example-card">
+    <form [formGroup]="form"  #formDir="ngForm" novalidate>
+      <mat-card-header>
+        <mat-card-title>{{title}} </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="controls">
+          <mat-form-field appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="User Name"
+              formControlName="UserName"
+            />
+            <mat-hint>Enter your User Name</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder="Password"
+              formControlName="UserPassword"
+            />
+            <mat-hint>Enter Your password</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Select User Role</mat-label>
+            <mat-select [(value)]="UserAccessparams.UserAccessPermissionID" formControlName="UserAccessPermissionID">
+              <mat-option *ngFor="let item of UserAccessData" [value]="item.UserAccessPermissionID" >
+                {{ item.UserRoleName }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="actions">
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!form.valid"
+            (click)="RegisterUser()"
+          >
+            Save 
+          </button>
+
+          <br />
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Go Back
+          </button>
+        </div>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

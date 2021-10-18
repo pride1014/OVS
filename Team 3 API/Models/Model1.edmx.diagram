@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="606cd5e9aa8a420d910d3fbb56665560" Name="Diagram1">
+        <EntityTypeShape EntityType="OVSModel.Branch" Width="1.5" PointX="5.25" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Cart" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Cart_Line" Width="1.5" PointX="7.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Cash_Register" Width="1.5" PointX="7.5" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Colour" Width="1.5" PointX="12.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Credit_Note" Width="1.5" PointX="17.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Customer" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Customer_Type" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Date" Width="1.5" PointX="8.25" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Date_Time_Slot" Width="1.5" PointX="10.5" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Discount" Width="1.5" PointX="1.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Employee" Width="1.5" PointX="7.5" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Employee_Type" Width="1.5" PointX="5.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job_Instance" Width="1.5" PointX="12" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job_Instance_Task" Width="1.5" PointX="14.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job_Status" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job_task" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job_Task_Status" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Job_Task_Type" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Order" Width="1.5" PointX="5.25" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Order_Line" Width="1.5" PointX="7.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Order_Payment" Width="1.5" PointX="15.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Order_Payment_Status" Width="1.5" PointX="13.25" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Order_Status" Width="1.5" PointX="3" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Payment_Type" Width="1.5" PointX="13.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Price" Width="1.5" PointX="12.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Product" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Product_Category" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Product_Size" Width="1.5" PointX="10.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Product_Special" Width="1.5" PointX="15.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Product_Type" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Quote_Line" Width="1.5" PointX="15.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Quote_Status" Width="1.5" PointX="3.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Raw_Material" Width="1.5" PointX="8.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Recipe" Width="1.5" PointX="8.25" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Recipe_Line_Unit" Width="1.5" PointX="8.25" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Reciple_Line" Width="1.5" PointX="10.5" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Request_Quote" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Return_Order_Request" Width="1.5" PointX="10.5" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Return_Order_Request_Order_Line" Width="1.5" PointX="12.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Return_Sale_Request" Width="1.5" PointX="10.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Return_Sale_Request_Sale_Line" Width="1.5" PointX="12.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Sale" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Sale_Line" Width="1.5" PointX="10.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Sale_Payment" Width="1.5" PointX="15.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Sale_Payment_Status" Width="1.5" PointX="13.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Shift" Width="1.5" PointX="5.25" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Shift_Branch" Width="1.5" PointX="7.5" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Shift_Branch_Employee" Width="1.5" PointX="9.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Shift_Type" Width="1.5" PointX="3" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Size" Width="1.5" PointX="8.25" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Special" Width="1.5" PointX="13.5" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Supplier" Width="1.5" PointX="6" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Supplier_Order" Width="1.5" PointX="8.25" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Supplier_Order_Line" Width="1.5" PointX="10.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Task" Width="1.5" PointX="7.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Time_Slot" Width="1.5" PointX="8.25" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Unit" Width="1.5" PointX="6" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.User" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.User_Access_Permission" Width="1.5" PointX="1.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.VAT" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Wishlist" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OVSModel.Wishlist_Product" Width="1.5" PointX="7.5" PointY="10.25" IsExpanded="true" />
+        <AssociationConnector Association="OVSModel.FK__Cash_Regi__Branc__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Shift_Bra__Branc__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Cart__Customer_I__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Cart__User_ID__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Cart_Line__Cart___59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Cart_Line__Produ__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Sale_Paym__Regis__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Colour__Product___3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Credit_No__Custo__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Credit_No__Retur__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Customer__Custom__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Customer__User_I__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Order__Customer___6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Return_Or__Custo__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Return_Sa__Custo__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Wishlist__Custom__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Customer___Disco__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Date_Time__Date___403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Date_Time__Shift__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Date_Time__Time___3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Employee__Employ__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Employee__User_I__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Order__Employee___693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Shift_Bra__Emplo__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job__Job_Status___40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job__Product_ID__41EDCAC5" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_task__Job_ID__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_Insta__Job_I__4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_Insta__Job_t__4A8310C6" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_Insta__Shift__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_Insta__Job_t__4E53A1AA" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_task__Job_Ta__46B27FE2" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_task__Job_Ta__47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Job_task__Task_I__45BE5BA9" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Order__Order_Sta__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Order_Pay__Order__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Return_Or__Order__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Order_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Order_Line_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Product_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Order_Pay__Order__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Order_Pay__Payme__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Sale_Paym__Payme__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Price__Product_S__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Product__Product__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Product_S__Produ__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Quote_Lin__Produ__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Sale_Line__Produ__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Supplier___Produ__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Wishlist___Produ__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Product_T__Produ__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Product_S__Produ__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Product_S__Size___2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Quote_Lin__Produ__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Product_S__Speci__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Quote_Lin__Reque__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Request_Q__Quote__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Raw_Mater__Unit___29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Reciple_L__Raw_M__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Supplier___Raw_M__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Reciple_L__Recip__3493CFA7" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Reciple_L__Recip__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Sale__Request_Qu__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Return_Order_Request_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Return_Sale_Request_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Sale_Line_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Sale_Paym__Sale___17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK_Sale_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Sale_Paym__Sale___160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Shift__Shift_Typ__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Shift_Bra__Shift__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Shift_Bra__Shift__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Supplier___Suppl__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Supplier___Suppl__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__User__User_Acces__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="OVSModel.FK__Wishlist___Wishl__619B8048" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

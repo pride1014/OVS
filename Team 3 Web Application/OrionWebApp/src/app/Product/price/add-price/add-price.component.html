@@ -1,0 +1,58 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreatePrice()" #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{title}}</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Price Amount</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="500"
+            formControlName="PriceAmount"
+         
+          />
+          <mat-hint>Price Amount</mat-hint>
+        </mat-form-field>
+        <br/>
+
+                <mat-form-field appearance="outline">
+          <mat-label>Price Date</mat-label>
+          <input
+            type="date"
+            matInput
+            placeholder="2021/05/21"
+            formControlName="PriceDate"
+         
+          />
+          <mat-hint>Price Date</mat-hint>
+        </mat-form-field>
+        <br/>
+  
+
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Price
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" >
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>
+
+

@@ -1,0 +1,660 @@
+<p>
+  <mat-toolbar class="flex">
+    <button
+      mat-icon-button
+      class="example-icon"
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Manager</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon> person_pin</mat-icon>
+    <span>Personal details</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
+  </button>
+  <button routerLink="/" mat-menu-item>
+    <mat-icon>lock</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>
+
+<div class="container">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Employees</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/employees.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="employee()"
+          >
+            View Employees
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Employee Types</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/EmployeeType.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="EmployeeType()"
+          >
+            View Employee Types
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Customers</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/customers.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="customers()"
+          >
+            View Customers
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Customer Types</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/types.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="customertype()"
+          >
+            View Customer Types
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Jobs</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/job.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="jobs()"
+          >
+            View Jobs
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Products</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/products.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="ManageProducts()"
+          >
+            View Products
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Product Catagory</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/ProductCategory.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="ProductCatagory()"
+          >
+            View Product Catagory
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Product Type</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/ProductType.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="ProductType()"
+          >
+            View Product Type
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Raw Materials</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/RawMaterials.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="RawMaterials()"
+          >
+            View Raw Materials
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Discounts</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/Discount.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="Discount()"
+          >
+            View Discount
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Branches</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/branch.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="branch()"
+          >
+            View Branches
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Reports</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/reports.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="reports()"
+          >
+            View Reports
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Cash Registers</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/cashRegister.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="CashRegister()"
+          >
+            View Cash Registers
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Recipe</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/recipe.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="Recipe()"
+          >
+            View Recipe
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Users</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/users.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="ManageUsers()"
+          >
+            View Users
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Suppliers</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/supplier.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="Suppliers()"
+          >
+            View Suppliers
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Sizes</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/sizes.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+          
+            color="primary"
+            (click)="Sizes()"
+          >
+            View Sizes
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Product Sizes</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/product-size.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+          
+            color="primary"
+            (click)="ProductSizes()"
+          >
+            View Product Sizes
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Shift</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/vat.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="shift()"
+          >
+            View Shifts
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>VAT</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/Shift.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="VAT()"
+          >
+            View Vat Rates
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

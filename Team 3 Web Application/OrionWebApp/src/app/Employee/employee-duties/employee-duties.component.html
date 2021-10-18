@@ -1,0 +1,82 @@
+<p>
+  <mat-toolbar class="flex">
+    <button
+      mat-icon-button
+      class="example-icon"
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Employee</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon> person_pin</mat-icon>
+    <span>Personal details</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
+  </button>
+  <button routerLink="/" mat-menu-item>
+    <mat-icon>lock</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>
+
+<div class="container">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Quotes</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <div class="image">
+        <img
+          class="images"
+          mat-card-image
+          src="assets/images/Quote.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <mat-card-actions>
+        <div class="button">
+          <button
+            mat-raised-button
+            class="buttons"
+            routerLink="/Product-details"
+            color="primary"
+            (click)="Quote()"
+          >
+            View Quotes
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  </div>

@@ -1,0 +1,59 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="RegisterCustomerType()" #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title><h1>{{title}}</h1></h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Customer Type Name</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Wholesaler"
+            formControlName="CustomerTypeDescription"
+           
+          />
+          <mat-hint>Customer Type Name</mat-hint>
+        </mat-form-field>
+       
+    
+
+
+
+        <mat-form-field>
+          <mat-label>Select Discount</mat-label>
+          <mat-select
+            [(value)]="Params.DiscountID"
+            formControlName="DiscountID"
+          >
+            <mat-option *ngFor="let item of DiscountData" [value]="item.DiscountID">
+              {{ item.DiscountName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <br />
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save 
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>
+

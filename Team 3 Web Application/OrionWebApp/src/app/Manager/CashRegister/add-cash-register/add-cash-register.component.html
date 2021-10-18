@@ -1,0 +1,57 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreateCashRegister()" #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{title}}</h2>
+
+                <mat-form-field appearance="outline">
+            <mat-label>Select Branch</mat-label>
+            <mat-select [(value)]="BranchParams.BranchID" formControlName="BranchID">
+                <mat-option *ngFor="let item of BranchData" [value] = "item.BranchID">
+                {{item.BranchName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="AddBranch()">
+  Add Branch
+</button>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Cash Register Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Register 1"
+            formControlName="CashRegisterName"
+            pattern = "[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Cash RegisterName</mat-hint>
+        </mat-form-field>
+        <br/>
+
+
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Cash Register
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>
+

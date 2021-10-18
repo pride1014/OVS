@@ -1,0 +1,88 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreateRecipe()" #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{title}}</h2>
+
+        <br />
+              
+        <mat-form-field appearance="outline">
+            <mat-label>Select Product to Create Recipe for</mat-label>
+            <mat-select [(value)]="ProductParams.ProductID" formControlName="ProductID">
+                <mat-option *ngFor="let item of ProductData" [value] = "item.ProductID">
+                {{item.ProductName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+          <br/>
+
+        
+
+        
+        <mat-form-field appearance="outline">
+          <mat-label>Recipe Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Sanitizer"
+            formControlName="RecipeName"
+            pattern = "[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Recipe Name</mat-hint>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="outline">
+          <mat-label>Recipe Description</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="A recipe for making sanitizer"
+            formControlName="RecipeDescription"
+          />
+          <mat-hint>Description of your recipe</mat-hint>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="outline">
+          <mat-label>Quantity Produced</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="500"
+            formControlName="QuantityProduced"
+          />
+          <mat-hint>Enter the Quantity Produced</mat-hint>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Select Raw Materials to Create Recipe </mat-label>
+          <mat-select [(value)]="RawParams.RawMaterialID" formControlName="RawMaterialID">
+              <mat-option *ngFor="let item of MaterialData" [value] = "item.RawMaterialID">
+              {{item.RawMaterialName}}
+              </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+        <br/>
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Recipe
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

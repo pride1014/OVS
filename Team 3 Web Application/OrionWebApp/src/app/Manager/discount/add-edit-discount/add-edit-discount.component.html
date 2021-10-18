@@ -1,0 +1,65 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreateDiscount()">
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>Create Discount</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Discount Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Free Lunch"
+            formControlName="DiscountName"
+            pattern = "[a-zA-Z][a-zA-Z\s]*"
+          />
+          <mat-hint>Discount Name</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Discount Description</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Get 15% When you spend over R500"
+            formControlName="DiscountDescription"
+          />
+          <mat-hint>Discount Description</mat-hint>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Discount Percentage</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="15%"
+            formControlName="DiscountPercentage"
+          />
+          <mat-hint>Discount Percentage</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Create Discount
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

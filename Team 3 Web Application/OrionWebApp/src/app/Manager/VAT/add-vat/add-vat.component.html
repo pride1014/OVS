@@ -1,0 +1,51 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="CreateVAT()">
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>Create VAT Rate</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>VAT Date</mat-label>
+          <input
+            type="date"
+            matInput
+            placeholder="2020/01/01"
+            formControlName="VATDate"
+          />
+          <mat-hint>VAT date</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>VAT Percentage</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="15"
+            formControlName="VATPercentage"
+          />
+          <mat-hint>VAT Percentage</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Create VAT Rate
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

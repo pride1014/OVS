@@ -1,0 +1,62 @@
+<div class="container">
+  <form [formGroup]="branchForm">
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>Edit Branch</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Branch Name</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="Pretoria Branch"
+            formControlName="BranchName"
+          />
+          <mat-hint>Branch Name</mat-hint>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="outline">
+          <mat-label>Storage Capacity</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="10000"
+            formControlName="BranchLocationStorageCapacity"
+          />
+          <mat-hint>The storage capacity of the branch</mat-hint>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="outline">
+          <mat-label>Branch Address</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="562 Harrop Allin Road"
+            formControlName="BranchAddress"
+          />
+          <mat-hint>Enter the Branch Address</mat-hint>
+        </mat-form-field>
+        <br />
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!branchForm.valid"
+          >
+            Create Branch
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

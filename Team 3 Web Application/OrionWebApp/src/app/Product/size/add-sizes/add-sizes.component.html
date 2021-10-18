@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="Save()"  #formDir="ngForm" novalidate>
+    <mat-dialog-content class="mat-typography">
+      <div class="controls">
+        <br />
+        <h2 mat-dialog-title>{{title}}</h2>
+
+        <br />
+        <mat-form-field appearance="outline">
+          <mat-label>Size Description</mat-label>
+          <input
+            type="string"
+            matInput
+            placeholder="750 ml"
+            formControlName="SizeDescription"
+          
+          />
+          <mat-hint>Size Description</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <br />
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            cdkFocusInitial
+            [disabled]="!form.valid"
+          >
+            Save Size
+          </button>
+          &nbsp;&nbsp; &nbsp;
+
+          <button mat-raised-button color="primary" (click)="back()">
+            Cancel
+          </button>
+        </mat-dialog-actions>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>
+
