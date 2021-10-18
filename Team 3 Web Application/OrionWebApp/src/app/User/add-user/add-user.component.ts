@@ -83,7 +83,7 @@ export class AddUserComponent implements OnInit {
       this.service.AddUser(this.form.value).subscribe((res: any) => {
         // this.dialogRef.close();
         console.log(res);
-        this.snack.open('Successful registration', 'OK', {
+        this.snack.open('Successful Registered a user', 'OK', {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
           duration: 3000
@@ -100,7 +100,7 @@ export class AddUserComponent implements OnInit {
         }
 
         else if (res.Success === true) {
-          this.snack.open('This user has already been registered.', 'OK', {
+          this.snack.open('This user has been registered.', 'OK', {
             horizontalPosition: 'center',
             verticalPosition: 'bottom',
             duration: 3000
@@ -110,7 +110,7 @@ export class AddUserComponent implements OnInit {
         }
       }, (error: HttpErrorResponse) => {
         if (error.status === 403) {
-          this.snack.open('This user has already been registered.', 'OK', {
+          this.snack.open('This user been registered.', 'OK', {
             horizontalPosition: 'center',
             verticalPosition: 'bottom',
             duration: 3000
